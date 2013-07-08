@@ -1,44 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">
-<title>FireTroop - О компании</title>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<link rel="stylesheet" type="text/css" href="css/anythingslider.css" />
-<script src="js/jquery-1.9.1.js"></script>
-<script src="js/jquery.anythingslider.js"></script>
-<script>
-$(function(){
-	$('#slider').anythingSlider({
-		buildStartStop: false,
-		hashTags: false
-	});
-	$('.short-product').hover(
-		function(){
-			$(this).children('.bay').addClass('bay_hover');
-		},
-		function(){
-			$('.bay').removeClass('bay_hover');
-		}
-	);
-})
-</script>
+<head>
+	<title>FireTroop - about company</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<script src="js/jquery-1.9.1.js"></script>
+	<script src="js/jquery.anythingslider.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/less" href="css/style.less" />
+	<script src="js/less.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="css/anythingslider.css" />
+	<!--[if IE 9]> <link href="css/ie9.css" rel="stylesheet" type="text/css"/> <![endif]-->
+	<script>
+	$(function(){
+		$('#slider').anythingSlider({
+			buildStartStop: false,
+			hashTags: false
+		});
+		$('#search')
+		.focus(function(){if ($(this).val() == 'РџРѕРёСЃРє РїРѕ РєР°С‚Р°Р»РѕРіСѓ') {$(this).val('');} })
+		.blur(function(){if ($(this).val() == '') {$(this).val('РџРѕРёСЃРє РїРѕ РєР°С‚Р°Р»РѕРіСѓ');} })
+	})
+	</script>
+</head>
 <body>
 <div id="wrapper">
 	<div class="top-menu clearfix">
-		<div class="nav hover">
+		<div class="nav">
 			<ul>
-				<li><a href="#">Каталог</a></li>
-				<li><a href="#">Гарантия</a></li>
-				<li><a href="#">Спецпредложения</a></li>
-				<li><a href="#">Контакты</a></li>
+				<li><a href="#">РљР°С‚Р°Р»РѕРі</a></li>
+				<li><a href="#">Р“Р°СЂР°РЅС‚РёСЏ</a></li>
+				<li><a href="#">РЎРїРµС†РїСЂРµРґР»РѕР¶РµРЅРёСЏ</a></li>
+				<li><a href="#">РљРѕРЅС‚Р°РєС‚С‹</a></li>
 			</ul>
 		</div>
 		<div class="login-or-register">
 		<ul>
-			<li><span class="arrow"></span><a href="#">Регистрация</a></li>
-			<li><span class="arrow"></span><a href="#">Вход</a></li>
+			<li><span class="arrow"></span><a href="#">Р РµРіРёСЃС‚СЂР°С†РёСЏ</a></li>
+			<li><span class="arrow"></span><a href="#">Р’С…РѕРґ</a></li>
 		</ul>
 		</div>
 	</div>
@@ -47,183 +47,155 @@ $(function(){
 			<div class="header clearfix">
 				<div class="logo">
 					<a href="/"><img src="img/logo.png" alt=""/></a>
-					<p>Интернет магазин климатического оборудования</p>
+					<p>РРЅС‚РµСЂРЅРµС‚ РјР°РіР°Р·РёРЅ РєР»РёРјР°С‚РёС‡РµСЃРєРѕРіРѕ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</p>
 				</div>
 				<div class="top-app">
 					<div class="info"><span class="code-t">(812) </span>234 34 54</div>
-					<div class="hover email-contact"><a href="#">autotermo@mail.ru</a></div>
+					<div class="email-contact"><a href="#">Avtotermo@mail.ru</a></div>
 					<div class="button-app"><a href="#"><img src="img/button-app.png" title="" alt=""/></a></div>
 					<div class="basket">
 						<div class="basket-img">
 							<img src="img/basket.png" alt="" />
 						</div>
 						<div class="basket-info">
-							<p class="products-number">Моя корзина <span class="number">2</span></p>
-							<p class="sum">На сумму 12.000р</p>
+							<p class="products-number">РњРѕСЏ РєРѕСЂР·РёРЅР° <span class="number">2</span></p>
+							<p class="sum">РќР° СЃСѓРјРјСѓ 12.000СЂ</p>
 						</div>
 					</div>
 				</div>
 				<div class="search-form">
 					<form action="" method="GET">
-						<input type="text" name="q" value="Поиск по каталогу"/>
+						<input type="text" id="search" name="q" value="РџРѕРёСЃРє РїРѕ РєР°С‚Р°Р»РѕРіСѓ"/>
 						<input type="image" src="img/search-button.png" />
 					</form>
 				</div>
 			</div>
-			<div class="sidebarL">
-				<div class="navigation">
-					<div class="catalog">Каталог</div>
-					<ul>
-						<li><a href="#">Подогреватели жидкостные</a></li>
-						<li><a href="#">Рифрежераторы</a></li>
-						<li><a href="#">Воздушные отопители</a></li>
-						<li><a href="#">Тепловой аккумулятор</a></li>
-						<li><a href="#">Спецпредложения</a></li>
-						<li><a href="#">Новинки</a></li>
-					</ul>
+			<div class="center clearfix">
+				<div class="sidebarL">
+					<div class="navigation">
+						<div class="catalog">РљР°С‚Р°Р»РѕРі</div>
+						<ul>
+							<li><a href="#">РџРѕРґРѕРіСЂРµРІР°С‚РµР»Рё Р¶РёРґРєРѕСЃС‚РЅС‹Рµ</a></li>
+							<li><a href="#">Р РµС„СЂРёР¶РµСЂР°С‚РѕСЂС‹</a></li>
+							<li><a href="#">Р’РѕР·РґСѓС€РЅС‹Рµ РѕС‚РѕРїРёС‚РµР»Рё</a></li>
+							<li><a href="#">РўРµРїР»РѕРІРѕР№ Р°РєРєСѓРјСѓР»СЏС‚РѕСЂ</a></li>
+							<li><a href="#">РЎРїРµС†РїСЂРµРґР»РѕР¶РµРЅРёСЏ</a></li>
+							<li><a href="#">РќРѕРІРёРЅРєРё</a></li>
+						</ul>
+					</div>
+					<div class="help-block">
+						<div class="name_block">РџРѕРјРѕС‰СЊ</div>
+						<p class="help-sprite-1"><a href="#">Р”РѕСЃС‚Р°РІРєР°</a></p>
+						<p class="help-sprite-2"><a href="#">РЎРїРѕСЃРѕР±С‹ РѕРїР»Р°С‚С‹</a></p>
+						<p class="help-sprite-3"><a href="#">РЎРµСЂРІРёСЃ</a></p>
+					</div>
+					<div class="news-block">
+						<div class="name_block">РќРѕРІРѕСЃС‚Рё</div>
+							<dl>
+								<dt>12.05.2013</dt>
+								<dd><a href="#">РќР°С€Р° РєРѕРјРїР°РЅРёСЏ Р·Р°РЅРёРјР°РµС‚СЃСЏ С‚РµС…РЅРёС‡РµСЃРєРёРј РґРёС„РіРЅРѕСЃС‚РёСЂРѕРІР°РЅРёРµРј</a></dd>
+								<dt>03.05.2013</dt>
+								<dd><a href="#">РЎРёСЃС‚РµРјР° РєРѕРЅРґРёС†РёРѕРЅРёСЂРѕРІР°РЅРёСЏ РІ СЃРѕРІСЂРµРјРµРЅРЅРѕРј Р°РІС‚РѕРјРѕР±РёР»Рµ СѓР¶Рµ РґР°...</a></dd>
+								<dt>03.05.2013</dt>
+								<dd><a href="#">РЎРёСЃС‚РµРјР° РєРѕРЅРґРёС†РёРѕРЅРёСЂРѕРІР°РЅРёСЏ РІ СЃРѕРІСЂРµРјРµРЅРЅРѕРј Р°РІС‚РѕРјРѕР±РёР»Рµ СѓР¶Рµ РґР°...</a></dd>
+							</dl>
+					</div>
 				</div>
-				<div class="help-block hover">
-					<div class="help">Помощь</div>
-					<p class="help-sprite-1"><a href="#">Доставка</a></p>
-					<p class="help-sprite-2"><a href="#">Способы оплаты</a></p>
-					<p class="help-sprite-3"><a href="#">Сервис</a></p>
-				</div>
-				<div class="news-block hover">
-					<div class="news">Новости</div>
-						<dl>
-							<dt>12.05.2013</dt>
-							<dd><a href="#">Наша компания занимается техническим дифгностированием</a></dd>
-							<dt>03.05.2013</dt>
-							<dd><a href="#">Система кондиционирования в современном автомобиле уже да...</a></dd>
-							<dt>03.05.2013</dt>
-							<dd><a href="#">Система кондиционирования в современном автомобиле уже да...</a></dd>
-						</dl>
-				</div>
-			</div>
-			<div class="center">
-				<div class="slider">
-					<ul id="slider">
-						<li>
-							<div class="info-slider">
-							<h1>Webasto Termo Top E бензин</h1>
-							<ul>
-								<li>Тип топлива: Бензин</li>
-								<li>Напряжение: 12 вольт</li>
-								<li>Мощность: 4 kBt</li>
-							</ul>
-							<div class="old-cena"><del>135 000 руб.</del></div>
-							<div class="new-cena">120 000 руб.</div>
+				<div class="sidebarRight">
+					<div class="slider">
+						<ul id="slider">
+							<li>
+								<div class="info-slider">
+								<h1>Webasto Termo Top E Р±РµРЅР·РёРЅ</h1>
+								<ul>
+									<li>РўРёРї С‚РѕРїР»РёРІР°: Р‘РµРЅР·РёРЅ</li>
+									<li>РќР°РїСЂСЏР¶РµРЅРёРµ: 12 РІРѕР»СЊС‚</li>
+									<li>РњРѕС‰РЅРѕСЃС‚СЊ: 4 kBt</li>
+								</ul>
+								<div class="old-price"><del>135 000СЂ.</del></div>
+								<div class="new-price">120 000СЂ.</div>
+								</div>
+								<a href="#"><img class="bay-slider" src="img/bay-slider.png" /></a>
+								<img src="slider/5.png" alt="" />
+							</li>
+							<li>
+								<img src="slider/2.jpg" alt="" />
+							</li>
+							<li>
+								<img src="slider/3.jpg" alt="">
+							</li>
+							<li><img src="slider/1.jpg" alt=""></li>
+						</ul>
+					</div>
+					<div class="products clearfix">
+					<div class="new">РќРѕРІРёРЅРєРё</div>
+						<div class="short-product">
+							<div class="white-product">
+							<span><a href="#">РџСЂРµРґРїСѓСЃРєРѕРІРѕР№ Р¶РёРґРєРѕСЃС‚РЅС‹Р№ РїРѕРґРѕРіСЂРµРІР°С‚РµР»СЊ РўРµРїР»РѕСЃС‚Р°СЂ </a></span>
+								<a href="#"><img src="img/product.png" alt=""/></a>
 							</div>
-							<a href="#"><img class="bay-slider" src="img/bay-slider.png" /></a>
-							<img src="slider/5.png" alt="" />
-						</li>
-						<li>
-							<img src="slider/2.jpg" alt="" />
-						</li>
-						<li>
-							<img src="slider/3.jpg" alt="">
-						</li>
-						<li><img src="slider/1.jpg" alt=""></li>
-					</ul>
-				</div>
-				<div class="products clearfix">
-				<div class="new">Новинки</div>
-					<div class="short-product hover">
-						<div class="white-product">
-						<span><a href="#">Топливный насос . 1111111111111111111
-						ssssssssssssssss
-						ssssssssssssss
-						ssssssssssssssss
-						sssssssssssssssss
-						ssssssssssssssss
-						sssssssssssssss
-						sssssssssssssssss
-						sssssssssssssssssss
-						sssssssssssssssssssss
-						sssssssssssssssssssssssss
-						sssssssssssssssssssssssss
-						ssssssssssssssss</a></span>
-							<a href="#"><img src="img/product.png" alt=""/></a>
+						<div class="bay"><span class="price">220000СЂСѓР±.</span><a href="#">РљСѓРїРёС‚СЊ</a></div>
 						</div>
-					<div class="bay"><span class="cena">220000руб.</span><a href="#">Купить</a></div>
-					</div>
-					<div class="short-product hover">
-						<div class="white-product">
-						<span><a href="#">Топливный насос . 1111111111111111111</a></span>
-							<a href="#"><img src="img/product.png" alt=""/></a>
+						<div class="short-product">
+							<div class="white-product">
+							<span><a href="#">РўРѕРїР»РёРІРЅС‹Р№ РЅР°СЃ 020.1106010</a></span>
+								<a href="#"><img src="img/product.png" alt=""/></a>
+							</div>
+						<div class="bay"><a href="#">РљСѓРїРёС‚СЊ</a></div>
 						</div>
-					<div class="bay"><a href="#">Купить</a></div>
-					</div>
-					<div class="short-product hover">
-						<div class="white-product">
-						<span><a href="#">Топливный насос . 1111111111111111111nn
-						nnnnnnnnnnnnnnnnnnnnnn
-						nnnnnnnnnnnnnnnnnnnn
-						nnnnnооооооооооо
-						kkkkkkkkkkkk
-						kkkkkkkkkkkkkk
-						ddddddddddddddd
-						ddddddddddddddddd
-						ddddddddddddddddd
-						dddddddddddddddd</a></span>
-							<a href="#"><img src="img/product.png" alt=""/></a>
+						<div class="short-product">
+							<div class="white-product">
+							<span><a href="">Р‘РёРЅР°СЂ-5Р‘-РєРѕРјРїР°РєС‚ СЃ РјРѕРЅС‚Р°Р¶РЅС‹Рј РєРѕРјРїР»РµРєС‚РѕРј Рё РїСѓР»СЊС‚РѕРј-С‚Р°Р№РјРµСЂРѕРј 12B</a></span>
+								<a href="#"><img src="img/product.png" alt=""/></a>
+							</div>
+						<div class="bay"><span class="price">220000СЂСѓР±.</span><a href="#">РљСѓРїРёС‚СЊ</a></div>
 						</div>
-					<div class="bay"><span class="cena">220000руб.</span><a href="#">Купить</a></div>
-					</div>
-					<div style="clear:both;"></div>
-					<div class="new">Популярное</div>
-					<div class="short-product hover">
-						<div class="white-product">
-						<span><a href="#">Топливный насос . 1111111111111111111nn
-						nnnnnnnnnnnnnnnnnnnnnn
-						nnnnnnnnnnnnnnnnnnnn
-						nnnnnооооооооооо
-						kkkkkkkkkkkk
-						kkkkkkkkkkkkkk
-						ddddddddddddddd
-						ddddddddddddddddd
-						ddddddddddddddddd
-						dddddddddddddddd</a></span>
-							<a href="#"><img src="img/product.png" alt=""/></a>
+						<div style="clear:both;"></div>
+						<div class="top">РџРѕРїСѓР»СЏСЂРЅРѕРµ</div>
+						<div class="short-product hover">
+							<div class="white-product">
+							<span><a href="#">РџСЂРµРґРїСѓСЃРєРѕРІРѕР№ Р¶РёРґРєРѕСЃС‚РЅС‹Р№ РїРѕРґРѕРіСЂРµРІР°С‚РµР»СЊ РўРµРїР»РѕСЃС‚Р°СЂ </a></span>
+								<a href="#"><img src="img/product.png" alt=""/></a>
+							</div>
+						<div class="bay"><span class="price">220000СЂСѓР±.</span><a href="#">РљСѓРїРёС‚СЊ</a></div>
 						</div>
-					<div class="bay"><span class="cena">220000руб.</span><a href="#">Купить</a></div>
-					</div>
-					<div class="short-product hover">
-						<div class="white-product">
-						<span><a href="#">Топливный насос . 1111111111111111111</a></span>
-							<a href="#"><img src="img/product.png" alt=""/></a>
+						<div class="short-product hover">
+							<div class="white-product">
+							<span><a href="#">РўРѕРїР»РёРІРЅС‹Р№ РЅР°СЃ 020.1106010</a></span>
+								<a href="#"><img src="img/product.png" alt=""/></a>
+							</div>
+						<div class="bay"><a href="#">РљСѓРїРёС‚СЊ</a></div>
 						</div>
-					<div class="bay"><span class="cena">220000руб.</span><a href="#">Купить</a></div>
-					</div>
-					<div class="short-product hover">
-						<div class="white-product">
-						<span><a href="#">Топливный насос . 1111111111111111111</a></span>
-							<a href="#"><img src="img/product.png" alt=""/></a>
+						<div class="short-product hover">
+							<div class="white-product">
+							<span><a href="">Р‘РёРЅР°СЂ-5Р‘-РєРѕРјРїР°РєС‚ СЃ РјРѕРЅС‚Р°Р¶РЅС‹Рј РєРѕРјРїР»РµРєС‚РѕРј Рё РїСѓР»СЊС‚РѕРј-С‚Р°Р№РјРµСЂРѕРј 12B</a></span>
+								<a href="#"><img src="img/product.png" alt=""/></a>
+							</div>
+						<div class="bay"><span class="price">220000СЂСѓР±.</span><a href="#">РљСѓРїРёС‚СЊ</a></div>
 						</div>
-					<div class="bay"><span class="cena">220000руб.</span><a href="#">Купить</a></div>
+					
 					</div>
-				
 				</div>
 			</div>
 		</div>
-		<div class="footer">
+		<div class="footer clearfix">
 			<div class="social">
-				<p class="copy">&copy;2013 "АвтоТермо"<p>
+				<p class="copy">&copy;2013 "РђРІС‚РѕРўРµСЂРјРѕ"<p>
 				<div class="button-social">
 					<a href="#"><img src="img/vk.png" alt=""/></a>
 					<a href="#"><img src="img/fb.png" alt=""/></a>
 				</div>
 			</div>
-			<div class="hover">
-				<p>Санкт-Петербург</p>
+			<div class="footer-contact">
+				<p>РЎР°РЅРєС‚-РџРµС‚РµСЂР±СѓСЂРі</p>
 				<p><a href="mailto:#">Autotermo@mail.ru</a></p>
 			</div>
-			<div>
+			<div class="footer-contact-phone">
 				<p>+7(812) 234 34 54</p>
 				<p>+7(812) 234 34 54</p>
 			</div>
 			<div class="copy-studio">
-				<p>Разработано в <a href="#">FireTroop</a></p>
+				<p>Р Р°Р·СЂР°Р±РѕС‚Р°РЅРѕ РІ <a href="#">FireTroop</a></p>
 			</div>
 		</div>
 	</div>
